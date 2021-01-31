@@ -1,12 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;700&display=swap');
+
+header {
+
+    display: grid;
+    height: 100vh;
+    place-items: center;
+
+}
+
+
 h1 {
 
-font-size: 800;
-background-color: blue;
+    font-family: 'Overpass Mono', monospace;
+font-size: 60pt;
 
 }
 
 p {
 
-    color: red;
-    font-size: large;
+    color: darkslateblue;
+    line-height: 1.4em;
+    font-size: 12pt;
+}
+
+.anfang {
+
+    font-size: 24pt;
+}
+
+.footer {
+height: 12pc;
+    background-color: rgb(148, 148, 148);
+}
+
+.footerelement {
+
+padding-top: 30px;
+
+
 }
