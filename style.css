@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;700&display=swap');
 
 
+@keyframes header {
+    0%{color:lightcoral;}
+    50%{color:magenta}
+    100%{color:lightcoral;};
+}
+
+
 * {
     display: grid;
     font-family: 'Overpass Mono', monospace;
@@ -15,7 +22,7 @@ header {
 
 nav {
 
-    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-columns:min-content min-content min-content;
     place-content: center;
     grid-gap: 5em;
     position: sticky;
@@ -38,8 +45,16 @@ h1 {
 
 
     font-size: 60pt;
+    animation-name: header;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    color: lightcoral;
+    padding: 1.4em;
+
 
 }
+
+
 
 section {
 
@@ -67,16 +82,23 @@ p {
 .anfang {
 
     font-size: 24pt;
+    font-weight:800;
+    float: left;
 }
 
 .footer {
-height: 12pc;
+
+    height: 86vh;
     background-color: rgb(148, 148, 148);
+    grid-template-columns:min-content min-content min-content;
+    place-content: center;
+    grid-gap: 5em;
+
 }
 
 .footerelement {
 
-
-background-color:rgb(231, 100, 100)
+    padding: 10px;
+    background-color:rgb(231, 100, 100)
 
 }
