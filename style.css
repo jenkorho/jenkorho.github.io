@@ -1,26 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;700&display=swap');
 
+
+* {
+    display: grid;
+    font-family: 'Overpass Mono', monospace;
+}
+
 header {
 
-    display: grid;
     height: 100vh;
     place-items: center;
+
+}
+
+nav {
+
+    grid-template-columns: 10vw 10vw 10vw;
+    place-content: center;
+    grid-gap: 5em;
+
+
+}
+
+nav div {
+
+    background-color: rgb(231, 100, 100);
+    padding: 10px;
+    text-align: center;
+    position: sticky 0px;
 
 }
 
 
 h1 {
 
-    font-family: 'Overpass Mono', monospace;
-font-size: 60pt;
+
+    font-size: 60pt;
+
+}
+
+section {
+
+place-content: center;
+height: 100vh;
+
+
+}
+
+h2 {
+
+text-align: center;
 
 }
 
 p {
-
+    width: 70vw;
     color: darkslateblue;
     line-height: 1.4em;
-    font-size: 12pt;
+    font-size: 14pt;
+    text-align: center;
+
 }
 
 .anfang {
@@ -35,7 +74,7 @@ height: 12pc;
 
 .footerelement {
 
-padding-top: 30px;
 
+background-color:rgb(231, 100, 100)
 
 }
