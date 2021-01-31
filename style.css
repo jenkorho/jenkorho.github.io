@@ -18,6 +18,8 @@ nav {
     grid-template-columns: 10vw 10vw 10vw;
     place-content: center;
     grid-gap: 5em;
+    position: sticky;
+    top: 0;
 
 
 }
@@ -27,7 +29,7 @@ nav div {
     background-color: rgb(231, 100, 100);
     padding: 10px;
     text-align: center;
-    position: sticky 0px;
+
 
 }
 
