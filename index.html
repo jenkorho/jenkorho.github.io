@@ -6,7 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
+    <script>
 
+        var imgs = document.getElementsByName("p-image");
+
+        function showImage(element) {
+            imgs[parseInt(element.name)].style.opacity = "1";
+        }
+
+        function hideImage(element) {
+            imgs[parseInt(element.name)].style.opacity = "0";
+        }
+
+
+    </script>
 </head>
 
 <body>
@@ -28,12 +41,20 @@
                 illum
                 excepturi voluptas in eos totam blanditiis quam cupiditate veritatis sit maxime repellendus
                 obcaecati sunt?
-                Commodi nesciunt perferendis nisi dolorum reprehenderit, libero laudantium ratione soluta
-                perspiciatis!
-                Porro
-                reprehenderit odio autem voluptatibus aspernatur eius totam sed. Odio magnam sint vel tempora iure
-                natus
-                cupiditate enim sequi?</p>
+            </p>
+            <div class="btn-container">
+                <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="0">Projekti
+                    1</button>
+                <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="1">Projekti
+                    2</button>
+                <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="2">Projekti
+                    3</button>
+                <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="3">Projekti
+                    4</button>
+                <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="4">Projekti
+                    5</button>
+            </div>
+            <img src="images/Kala.jpg" class="p-image" name="p-image">
 
         </section>
         <section>
