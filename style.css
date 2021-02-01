@@ -7,16 +7,6 @@
     100%{color:lightcoral;};
 }
 
-@media only screen and (max-width: 700px) {
-
-    .footerelement {
-        text-align: center;
-    }
-    footer {
-        flex-flow: column;
-    }
-
-}
 
 * {
 
@@ -57,7 +47,8 @@ nav {
     margin-top: 5%;
     margin-bottom: 5%;
     font-size: 12pt;
-    float: right;
+    display: inline-block;
+    background-color: rgba(255,255,255,0.8);
 
 }
 
@@ -66,7 +57,7 @@ nav {
 .navitem {
 
     padding: 5px;
-    display: inline-block;
+
     /*background-color:rgb(231, 100, 100);*/
 
 }
@@ -140,52 +131,64 @@ p {
 
 }
 
-footer {
 
-    background-color: rgb(148, 148, 148);
-    display: flex;
+/*FOOTER*/
 
-    flex-wrap: wrap;
+.red {
+    background-color: rgb(231, 100, 100);
+}
+
+.l-footer {
+
+
+    display: grid;
+    float: left;
+    grid-auto-flow: column;
+
 
 }
 
-.footerelement {
+.l-footer .footerelement {
 
-    /*text-align: left;*/
-    background-color:rgb(231, 100, 100);
     font-size: 12pt;
     min-width: 100px;
     max-width: 300px;
     height: auto;
-    float: left;
-    /*overflow: hidden;*/
-    display: inline;
+  
+ 
 
 }
 
-/*Divin mukaan skaalautuva*/
+.r-footer {
 
-/*.div-img {
+    display: grid;
+    float: right;
 
-    width: auto;
-    height: 100%;
-    display: inline-block;
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-    right: -9999px;
-    bottom: -9999px;
-    margin: auto;
+
 }
-*/
 
-img.footerlement {
+.r-footer img {
 
-float: right;
+    min-width: 100px;
+    max-width: 200px;
+    height: auto;
 
 }
 
 .footerelement ul {
 
     list-style-type: none;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .l-footer {
+        grid-auto-flow: row;
+        grid-row: 0% 100%;
+
+    }
+    .r-footer {
+
+        grid-auto-flow: row;
+    }
 }

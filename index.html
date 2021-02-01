@@ -2,24 +2,12 @@
 <html>
 
 <head>
+    <title>Prokkissivu</title>
     <meta content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
-    <script>
 
-        var imgs = document.getElementsByName("p-image");
-
-        function showImage(element) {
-            imgs[parseInt(element.name)].style.opacity = "1";
-        }
-
-        function hideImage(element) {
-            imgs[parseInt(element.name)].style.opacity = "0";
-        }
-
-
-    </script>
 </head>
 
 <body>
@@ -53,10 +41,37 @@
                     3</button>
                 <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="3">Projekti
                     4</button>
-                <button class="group-btn" onmouseover="showImage(this)" onmouseout="hideImage(this)" name="4">Projekti
-                    5</button>
             </div>
-            <img src="images/Kala.jpg" class="p-image" name="p-image">
+            <img src="images/1.jpg" class="p-image" name="p-image">
+
+            <script>
+
+                //kuva esiin ja piiloon kun hiiri hoveraa
+
+                var imgs = document.getElementsByName("p-image");
+                var img = imgs[0];
+                var elementName = "1";
+
+
+                //oikea kuva on "element.name" + ".jpg"
+
+                function showImage(element) {
+                    elementName = element.name.toString();
+                    img.src = getImageName();
+                    img.style.opacity = "1";
+                }
+
+                function getImageName() {
+                    var imagename = "images/" + elementName + ".jpg";
+                    return imagename;
+                }
+
+                function hideImage() {
+                    img.style.opacity = "0";
+                }
+
+
+            </script>
 
         </section>
         <section>
@@ -80,33 +95,36 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="red">
+        <div class="l-footer">
+            <div class="footerelement">
 
-        <div class="footerelement">
+                <ul>
+                    <li>
+                        <h3>Minusta</h3>
+                    </li>
+                    <li>Koulutus</li>
+                    <li>Työ</li>
+                    <li>Harrastukset</li>
+                    <li>Muu</li>
+                </ul>
+            </div>
 
-            <ul>
-                <li>
-                    <h3>Minusta</h3>
-                </li>
-                <li>Koulutus</li>
-                <li>Työ</li>
-                <li>Harrastukset</li>
-                <li>Muu</li>
-            </ul>
+            <div class="footerelement">
+                <ul>
+                    <li>
+                        <h3>Yhteystiedot</h3>
+                    </li>
+                    <li>Puhelin</li>
+                    <li>Email</li>
+                    <li>Osoite</li>
+
+                </ul>
+            </div>
         </div>
-
-        <div class="footerelement">
-            <ul>
-                <li>
-                    <h3>Yhteystiedot</h3>
-                </li>
-                <li>Puhelin</li>
-                <li>Email</li>
-                <li>Osoite</li>
-
-            </ul>
+        <div class="r-footer">
+            <img src="images/nimi-01.png" alt="Logo">
         </div>
-        <img src="images/nimi-01.png" alt="Logo" class="footerelement">
 
     </footer>
 </body>
