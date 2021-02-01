@@ -7,75 +7,85 @@
     100%{color:lightcoral;};
 }
 
+/*@media only screen and (max-width: 600px) {
+
+}*/
 
 * {
-    display: grid;
+
     font-family: 'Overpass Mono', monospace;
+    box-sizing: border-box;
+
 }
+
 
 header {
 
+    width: 80vw;
     height: 100vh;
+    display: grid;
     place-items: center;
-
-}
-
-nav {
-
-    grid-template-columns:min-content min-content min-content;
-    place-content: center;
-    grid-gap: 5em;
-    position: sticky;
-    top: 0;
+    margin-right: 10vw;
+    margin-left: 10vw;
 
 
 }
-
-nav div {
-
-    background-color: rgb(231, 100, 100);
-    padding: 10px;
-    text-align: center;
-
-
-}
-
 
 h1 {
-
 
     font-size: 60pt;
     animation-name: header;
     animation-duration: 3s;
     animation-iteration-count: infinite;
     color: lightcoral;
-    padding: 1.4em;
-
+    text-align: center;
+    
 
 }
 
+
+nav {
+
+    position: sticky;
+    top: 0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 12pt;
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+}
+
+.navitem {
+
+    background-color: rgb(231, 100, 100);
+    padding: 5vw;
+}
+
+
+main {
+
+    text-align: center;
+    width: 90vw;
+}
 
 
 section {
 
-place-content: center;
-height: 100vh;
 
-
-}
-
-h2 {
-
-text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
 
 }
+
 
 p {
-    width: 70vw;
+
     color: darkslateblue;
     line-height: 1.4em;
-    font-size: 14px;
-    text-align: center;
+    font-size: 16pt;
 
 }
 
@@ -83,22 +93,25 @@ p {
 
     font-size: 24pt;
     font-weight:800;
-    float: left;
+
 }
 
-.footer {
+footer {
 
-    height: 86vh;
     background-color: rgb(148, 148, 148);
-    grid-template-columns:min-content min-content min-content;
-    place-content: center;
-    grid-gap: 5em;
-
+   /* display: flex;
+    flex-flow: row;
+    justify-content: center;*/
 }
 
 .footerelement {
 
-    padding: 10px;
-    background-color:rgb(231, 100, 100)
+    text-align: left;
+    background-color:rgb(231, 100, 100);
+    font-size: 12pt;
+}
 
+.footerelement ul {
+
+    list-style-type: none;
 }
