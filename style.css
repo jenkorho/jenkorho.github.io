@@ -39,7 +39,6 @@ h1 {
     animation-iteration-count: infinite;
     color: lightcoral;
     text-align: center;
-    
 
 }
 
@@ -51,15 +50,17 @@ nav {
     margin-top: 5%;
     margin-bottom: 5%;
     font-size: 12pt;
-    display: flex;
-    flex-wrap: wrap-reverse;
 
 }
 
 .navitem {
 
     background-color: rgb(231, 100, 100);
-    padding: 5vw;
+    padding: 5px;
+    display: inline-block;
+
+
+
 }
 
 
@@ -99,9 +100,10 @@ p {
 footer {
 
     background-color: rgb(148, 148, 148);
-   /* display: flex;
+    display: flex;
     flex-flow: row;
-    justify-content: center;*/
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footerelement {
@@ -109,6 +111,22 @@ footer {
     text-align: left;
     background-color:rgb(231, 100, 100);
     font-size: 12pt;
+    width: 33%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.footerelement img {
+    width: auto;
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
 }
 
 .footerelement ul {
