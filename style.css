@@ -7,9 +7,16 @@
     100%{color:lightcoral;};
 }
 
-/*@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
-}*/
+    .footerelement {
+        text-align: center;
+    }
+    footer {
+        flex-flow: column;
+    }
+
+}
 
 * {
 
@@ -32,8 +39,8 @@ header {
 }
 
 h1 {
-
-    font-size: 60pt;
+    max-width: 80vw;
+    /*font-size: 60pt;*/
     animation-name: header;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -50,18 +57,31 @@ nav {
     margin-top: 5%;
     margin-bottom: 5%;
     font-size: 12pt;
+    float: right;
 
 }
+
+
 
 .navitem {
 
-    background-color: ;
     padding: 5px;
     display: inline-block;
-    background-color:rgb(231, 100, 100);
+    /*background-color:rgb(231, 100, 100);*/
 
 }
 
+
+.logo {
+
+    display: flex;
+    max-width: 10vw;
+    min-width: 100px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+
+}
 
 main {
 
@@ -89,22 +109,25 @@ p {
 
 }
 
-.btn-container {
 
-    background-color:rgb(231, 100, 100);
-
-}
 
 .group-btn {
 
     margin: 3px;
+    border-style: solid;
+    border-color: rgb(231, 100, 100);
+    border-width: 1px;
+    background-color: transparent;
 }
 
 
 .p-image {
 
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     opacity: 0;
-    max-width: 100vw;
+    max-width: 50vw;
     height: auto;
     overflow: hidden;
 
@@ -121,23 +144,29 @@ footer {
 
     background-color: rgb(148, 148, 148);
     display: flex;
-    flex-flow: row;
-    justify-content: center;
+
     flex-wrap: wrap;
+
 }
 
 .footerelement {
 
-    text-align: left;
+    /*text-align: left;*/
     background-color:rgb(231, 100, 100);
     font-size: 12pt;
-    width: 33%;
-    position: relative;
-    overflow: hidden;
+    min-width: 100px;
+    max-width: 300px;
+    height: auto;
+    float: left;
+    /*overflow: hidden;*/
+    display: inline;
 
 }
 
-.footerelement img {
+/*Divin mukaan skaalautuva*/
+
+/*.div-img {
+
     width: auto;
     height: 100%;
     display: inline-block;
@@ -147,6 +176,13 @@ footer {
     right: -9999px;
     bottom: -9999px;
     margin: auto;
+}
+*/
+
+img.footerlement {
+
+float: right;
+
 }
 
 .footerelement ul {
