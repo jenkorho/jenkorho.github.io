@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h2>Tämä on tehty määrittämällä rivi ja kolumnien paksuus</h2>
+    <!--<h2>Tämä on tehty määrittämällä rivi ja kolumnien paksuus</h2>
     <div class="row">
         <div class="col-1">1</div>
         <div class="col-2">2</div>
@@ -18,12 +18,17 @@
         <div class="col-5">5</div>
         <div class="col-6">6</div>
     </div>
+-->
 
-    <h2>Tämä on tehty vain määrittämällä divit, ja asettamalla containeri display: grid</h2>
     <div class="grid-container">
+
+        <!--Menu-->
+
         <div class="item1"><img src="images/nimi-01.png" class="logo"></div>
-        <div class="item2">2</div>
-        <div class="item3 r-al">
+
+        <div class="item2"></div>
+
+        <div class="item3 r-align nav-container">
             <nav>
                 <span class="nav">Linkki</span>
                 <span class="nav">Info</span>
@@ -31,14 +36,96 @@
             </nav>
         </div>
 
-        <div class="item4">
+        <!--Menu loppuu-->
+
+
+        <div class="item4 page-width">
             <h1>Iso otsikko</h1>
         </div>
-        <div class="item5">5</div>
-        <div class="item7">6</div>
-        <div class="item8">6</div>
+
+
+
+        <div class="item5 section-1 image-container large-padding">
+            <img src="images/0.jpg" alt="Demokuva1">
+        </div>
+
+        <div class="item6 section-1 r-main-container">
+            <h2 class="txt">Otsikko</h2>
+            <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis fugit velit quo
+                ex
+                distinctio ipsa a
+                eum at nihil. Ut ex eaque, suscipit dolore aperiam atque praesentium nisi reprehenderit.
+                Explicabo qui quos numquam? Incidunt cupiditate commodi debitis laborum impedit fugiat quaerat
+                qui?
+                Neque consequuntur dolorem sequi totam iste non nisi, impedit quisquam, ad aliquam nulla eos a
+                laboriosam hic.
+                Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit
+                rem
+                minus non ex a amet libero nulla. Soluta eveniet quo placeat rerum nisi enim, magni adipisci
+                fuga
+                asperiores!
+                Qui, odio. Rem voluptas ad sit repellendus quo quod voluptatum adipisci in dicta, perspiciatis
+                hic odit
+                corrupti, exercitationem delectus, maxime cum labore. Quia nihil harum ab, excepturi odio
+                expedita quo.
+                Earum tempora inventore commodi iusto doloremque maxime consectetur, facere ut dolorem eveniet
+                aliquam
+                eaque excepturi debitis nostrum eius deleniti rerum fugiat, quaerat illo, est vitae qui. Enim
+                aperiam
+                magnam quo.
+                Ullam nemo impedit recusandae eligendi reiciendis, odit earum eaque quia quo quaerat omnis
+                perspiciatis
+                odio, tempore, saepe accusantium? Modi ducimus magnam, recusandae fuga repellendus autem
+                obcaecati
+                quisquam aspernatur incidunt. Minus!</p>
+
+
+
+        </div>
+        <div class="item7 l-main-container section-2">
+            <h2 class="txt">Toinen otsikko</h2>
+            <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis fugit velit quo ex
+                distinctio ipsa a
+                eum at nihil. Ut ex eaque, suscipit dolore aperiam atque praesentium nisi reprehenderit.
+                Explicabo qui quos numquam? Incidunt cupiditate commodi debitis laborum impedit fugiat quaerat qui?
+                Neque consequuntur dolorem sequi totam iste non nisi, impedit quisquam, ad aliquam nulla eos a
+                laboriosam hic.
+                Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit rem
+                minus non ex a amet libero nulla. Soluta eveniet quo placeat rerum nisi enim, magni adipisci fuga
+                asperiores!</p>
+        </div>
+
+        <div class="item8 image-container large-padding section-2">
+            <img src="images/1.jpg" alt="Demokuva 2">
+        </div>
+
+
+
     </div>
 
+    <script>
+
+        window.onscroll = function () {
+
+            //funktiokutsut oisoiden määrän mukaan
+
+            slideAnim("1", 500);
+            slideAnim("2", 900);
+        }
+
+        function slideAnim(name, height) {
+            if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+                var a = document.getElementsByClassName("section-" + name);
+                for (var i = 0; i < a.length; i++) {
+                    a[i].className = a[i].className + " slide";
+                }
+
+            }
+
+        }
+
+
+    </script>
 
 </body>
 

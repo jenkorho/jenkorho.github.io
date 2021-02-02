@@ -1,9 +1,6 @@
-* {
-    box-sizing: border-box;
-}
 
 
-.row::after {
+/*.row::after {
     content: "";
     clear: both;
     display: table;
@@ -21,20 +18,31 @@
       background-color: red;
       margin: 2px;
   }
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: Rajdhani, sans-serif;
+}
 
   .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
 
   }
 
   [class*="item"]{
 
-    background-color: red;
+    background-color:white;
     margin: 2px;
+    
+
   }
 
-  .item4 {
+  .page-width{
       grid-column-start: 1;
       grid-column-end: 4;
 
@@ -47,14 +55,108 @@
       height: auto;
   }
 
-  nav {
-      float: right;
+  .nav {
+        float: right;
         padding-top: 100px;
-        padding-right: 50px;
+        padding-right: 20px;
   }
 
+  /*.nav-container {
+      background-color: lightsteelblue;
+  }
+*/
   h1 {
       padding: 5em;
       text-align:center;
   }
 
+ .large-padding {
+
+    padding: 20px 20px 20px 20px;
+  }
+
+
+/*Oikeanpuoleinen teksti, vasemmalla kuva*/
+
+  .r-main-container {
+      grid-column-start: 3;
+      grid-column-end: 4;
+  }
+/*Vasemmanpuoleinen teksti, vasemmalla kuva*/
+
+.l-main-container {
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+  .image-container {
+      background-color: transparent;
+  }
+
+  .image-container img {
+
+    width: 100%;
+    height: auto;
+  }
+
+[class*="section-"] {
+    visibility: hidden;
+}
+
+  .slide {
+      animation-name: slide;
+      animation-duration: 2s;
+      visibility: visible;
+
+  }
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%)
+    }
+}
+
+
+/* Mobiili: Keskittää sisällön ja muuttaa kolumnien määrän yhteeen*/
+
+@media only screen and (max-width: 700px) {
+
+    .grid-container {
+
+        grid-template-columns: 1fr;
+        place-items: center;
+        grid-column-gap: 0px;
+    
+      }
+      .l-main-container {
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .r-main-container {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .page-width{
+
+        grid-column-start: 1;
+        grid-column-end: 2;
+  
+    }
+    .image-container {
+        background-color: transparent;
+        padding-right: 0px;
+        padding-left: 0px;
+
+
+
+    }
+
+}
