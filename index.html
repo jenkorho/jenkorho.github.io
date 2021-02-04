@@ -19,7 +19,7 @@
 
             <div class="item logo"><img src="images/nimi-01.png">
             </div>
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" onclick="hamburgerBtn()">
                 <i class="fa">&#xf0c9;</i>
             </button>
             <div class="item nav-container" id="nav-links">
@@ -29,6 +29,19 @@
             </div>
 
         </div>
+
+        <script>
+
+            const hamburger = document.getElementById("hamburger");
+            const navlinks = document.getElementById("nav-links");
+
+            function hamburgerBtn() {
+                navlinks.classList.toggle("show");
+
+            }
+
+
+        </script>
 
         <!--Menu loppuu-->
 
@@ -61,9 +74,9 @@
                 asperiores!</p>
         </div>
 
-        <div class="item img-container img-padding section-2">
+        <div class="item img-container img-padding section-3">
             <img class="img" src="images/1.jpg" id="img2" alt="Demokuva 2">
-            <h2 class="txt img-head" onmouseover="infoText(this, 'img2')" onmouseout="textDisap(this, 'img2')">Ruoka
+            <h2 class="txt img-head" onmouseover="infoText(this, 'img2')" onmouseout="textDisap(this, 'img2')">Menu
             </h2>
         </div>
 
@@ -95,9 +108,11 @@
 
         <script>
 
-            var img_d = "Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit rem" +
+            const img_1 = "Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit rem" +
                 "minus non ex a amet libero nulla.Soluta eveniet quo placeat rerum nisi enim, magni adipisci fuga " +
                 "asperiores!";
+            const
+
             var originaltext = "";
 
 
@@ -164,8 +179,9 @@
 
                 //funktiokutsut oisoiden määrän mukaan
 
-                slideAnim("1", 500);
-                slideAnim("2", 900);
+                slideAnim("1", 400);
+                slideAnim("2", 1100);
+                slideAnim("3", 1700);
             }
 
             function slideAnim(name, height) {

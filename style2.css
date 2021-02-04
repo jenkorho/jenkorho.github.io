@@ -59,6 +59,7 @@ z-index: 10;
 .nav-link {
 
         padding: 40px 20px 30px 10px;
+        font-weight: 700;
   }
 
   .nav-container {
@@ -71,15 +72,26 @@ z-index: 10;
 
   }
 
+  .nav-link:hover {
+
+    font-weight: 700;
+    color: white;
+    background-color: tomato;
+
+  }
+
+
   /*Menu*/
 
   /*Pääotsikko*/
 
   .main-h {
 
-    margin-bottom: 50vh;
+    margin-bottom: 30vh;
+
     grid-column-start: 1;
     grid-column-end: -1;
+    color:tomato;
   }
 
 h1 {
@@ -87,6 +99,8 @@ h1 {
       font-size: 5em;
 
       text-align:center;
+      text-transform: capitalize;
+
   }
  /*Pääotsikko*/
 
@@ -129,6 +143,8 @@ position: relative;
 /*Sisältö*/
 .text-container {
 
+  margin-top: 30vh;
+  margin-bottom: 30vh;
   grid-column-start: 2;
   grid-column-end: 5;
   padding: 20px 20px 20px 20px;
@@ -201,6 +217,8 @@ position: relative;
     }
 }
 
+
+
 /*Animaatiot*/
 
 /* Mobiili: Keskittää sisällön ja muuttaa kolumnien määrän yhteeen*/
@@ -229,6 +247,8 @@ position: relative;
 
 .menu-container {
   grid-template-columns: 1fr 1fr;
+
+
 }
 
     .nav-container {
@@ -236,15 +256,41 @@ position: relative;
       display: none;
    
     }
+
+
     .hamburger {
 
+      max-width: max-content;
+      height: 20px;
       display:block;
       background-color: transparent;
       border: 0;
       font-size: 20px;
       color: black;
-      
+      padding: 60px 60px 60px 60px;
+      justify-self: end;
+ 
     }
+
+.hamburger:hover {
+  cursor:pointer;
+  color:tomato;
+}
+
+    .nav-container.show {
+      display: grid;
+      justify-content: center;
+      grid-auto-flow:row;
+      text-align: center;
+      height: 100vh;
+      align-content: start;
+
+    }
+
+    .nav-link {
+      width: 100vw;
+    }
+
 
         /*Footer*/
 
