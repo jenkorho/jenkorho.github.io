@@ -143,9 +143,11 @@ img {
 .img-container {
   grid-column-start: 2;
   grid-column-end: 5;
-max-width: 900px;
-text-align: center;
-position: relative;
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+  place-items: center;
+  margin: auto;
 
 }
 
