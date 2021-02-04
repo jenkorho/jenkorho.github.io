@@ -14,11 +14,11 @@
 
         <!--Menu-->
 
-        <div class="menu-bar sticky">
+        <div class="menu-container sticky">
 
-            <div class="item1 logo"><img src="images/nimi-01.png"></div>
+            <div class="item logo"><img src="images/nimi-01.png"></div>
 
-            <div class="item3 nav-container">
+            <div class="item nav-container">
                 <a class="nav-link">Linkki</a>
                 <a class="nav-link">Info</a>
                 <a class="nav-link">Yhteystiedot</a>
@@ -30,13 +30,13 @@
 
         <!--Ekarivi-->
 
-        <div class="item0 page-width main-h">
+        <div class="item main-h">
             <h1>Iso otsikko</h1>
         </div>
 
         <!--Tokarivi-->
 
-        <div class="item1 img-container img-padding section-1">
+        <div class="item img-container img-padding section-1">
             <img class="img" src="images/0.jpg" id="img1" alt="Demokuva1">
             <h2 class="txt img-head" onmouseover="infoText(this, 'img1')" onmouseout="textDisap(this, 'img1')">Otsikko
             </h2>
@@ -44,7 +44,7 @@
 
 
 
-        <div class="item5 text-container section-2">
+        <div class="item text-container section-2">
             <h3 class="txt">Toinen otsikko</h3>
             <p class="txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis fugit velit quo ex
                 distinctio ipsa a
@@ -57,112 +57,134 @@
                 asperiores!</p>
         </div>
 
-        <div class="item0 img-container img-padding section-2">
+        <div class="item img-container img-padding section-2">
             <img class="img" src="images/1.jpg" id="img2" alt="Demokuva 2">
             <h2 class="txt img-head" onmouseover="infoText(this, 'img2')" onmouseout="textDisap(this, 'img2')">Ruoka
             </h2>
         </div>
 
+        <div class="item footer-container">
+            <div class="footer logo"><img src="images/nimi-01.png"></div>
+            <div class="footer">
+                <h4 class="footer-text">Tietoa meistä</h4>
+                <ul class="footer-text">
+                    <li>Yritys</li>
+                    <li>Yhteystiedot</li>
+                    <li>Arvot</li>
+                    <li>Urat</li>
+                </ul>
+            </div>
+            <div class="footer">
+                <h4 class="footer-text">Hyödyllisiä linkkejä</h4>
+                <ul class="footer-text">
+                    <li>FAQ</li>
+                    <li>Tilausehdot</li>
+                    <li>Saapusaika</li>
+                    <li>Takuu</li>
+                </ul>
+            </div>
+            <div class="footer copyright footer-text">&copy; Jenna Korhonen 2021</div>
+
+        </div>
+
+        <!--Scriptaus-->
+
+        <script>
+
+            var img_d = "Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit rem" +
+                "minus non ex a amet libero nulla.Soluta eveniet quo placeat rerum nisi enim, magni adipisci fuga " +
+                "asperiores!";
+            var originaltext = "";
 
 
-    </div>
+            function imageBlur(image) {
 
-    <script>
+                var id = setInterval(frame, 5);
+                var px = 0;
 
-        var img_d = "Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit rem" +
-            "minus non ex a amet libero nulla.Soluta eveniet quo placeat rerum nisi enim, magni adipisci fuga " +
-            "asperiores!";
-        var originaltext = "";
+                console.log(image);
 
-
-        function imageBlur(image) {
-
-            var id = setInterval(frame, 5);
-            var px = 0;
-
-            console.log(image);
-
-            function frame() {
-                if (px == 50) {
-                    clearInterval(id);
-                }
-                else {
-                    px++;
-                    image.style.filter = "blur(" + px + "px)";
-
-                }
-            }
-
-        }
-
-        function antiBlur(image) {
-
-            var id = setInterval(frame, 5);
-            var px = 50;
-
-            console.log(image);
-
-            function frame() {
-                if (px == 0) {
-                    clearInterval(id);
-                }
-                else {
-                    px--;
-                    image.style.filter = "blur(" + px + "px)";
-
-                }
-
-            }
-
-        }
-
-        function infoText(element, id) {
-            var img = document.getElementById(id);
-            originaltext = element.innerHTML;
-            element.innerHTML = img_d;
-            element.style.fontSize = "1.3em";
-            element.style.fontWeight = "300";
-            imageBlur(img);
-        }
-
-        function textDisap(element, id) {
-            var img = document.getElementById(id);
-            element.innerHTML = originaltext;
-            element.style.fontSize = "2.5em";
-            element.style.fontWeight = "700";
-            antiBlur(img);
-        }
-
-
-        window.onscroll = function () {
-
-            //funktiokutsut oisoiden määrän mukaan
-
-            slideAnim("1", 500);
-            slideAnim("2", 900);
-        }
-
-        function slideAnim(name, height) {
-            if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
-                var a = document.getElementsByClassName("section-" + name);
-
-                for (var i = 0; i < a.length; i++) {
-                    if (a[i].classList.contains("slide") == false) {
-                        a[i].className = a[i].className + " slide";
+                function frame() {
+                    if (px == 50) {
+                        clearInterval(id);
                     }
                     else {
-                        continue;
-                    }
+                        px++;
+                        image.style.filter = "blur(" + px + "px)";
 
+                    }
+                }
+
+            }
+
+            function antiBlur(image) {
+
+                var id = setInterval(frame, 5);
+                var px = 50;
+
+                console.log(image);
+
+                function frame() {
+                    if (px == 0) {
+                        clearInterval(id);
+                    }
+                    else {
+                        px--;
+                        image.style.filter = "blur(" + px + "px)";
+
+                    }
 
                 }
 
             }
 
-        }
+            function infoText(element, id) {
+                var img = document.getElementById(id);
+                originaltext = element.innerHTML;
+                element.innerHTML = img_d;
+                element.style.fontSize = "1.3em";
+                element.style.fontWeight = "300";
+                imageBlur(img);
+            }
+
+            function textDisap(element, id) {
+                var img = document.getElementById(id);
+                element.innerHTML = originaltext;
+                element.style.fontSize = "2.5em";
+                element.style.fontWeight = "700";
+                antiBlur(img);
+            }
 
 
-    </script>
+            window.onscroll = function () {
+
+                //funktiokutsut oisoiden määrän mukaan
+
+                slideAnim("1", 500);
+                slideAnim("2", 900);
+            }
+
+            function slideAnim(name, height) {
+                if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
+                    var a = document.getElementsByClassName("section-" + name);
+
+                    for (var i = 0; i < a.length; i++) {
+                        if (a[i].classList.contains("slide") == false) {
+                            a[i].className = a[i].className + " slide";
+                        }
+                        else {
+                            continue;
+                        }
+
+
+                    }
+
+                }
+
+            }
+
+
+        </script>
 
 </body>
 

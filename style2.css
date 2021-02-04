@@ -16,38 +16,23 @@ body {
     grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
   
   }
-/*Tekstit ja otsikor*/
-.text-container {
-
-    grid-column-start: 2;
-    grid-column-end: 5;
-    padding: 20px 20px 20px 20px;
-
-  }
-
-.page-width {
-
-      grid-column-start: 1;
-      grid-column-end: 6;
-  
-  }
 
 .sticky {
     position: sticky;
     top: 0px;
 
   }
+
+
 /* Menu*/
 
-.menu-bar {
+.menu-container {
 
   grid-column-start: 1;
-  grid-column-end: 6;
-
+  grid-column-end: -1;
   display: grid;
-  grid-template-columns: 1fr;
-  /*backdrop-filter: blur(7px);*/
   background-color: white;
+  grid-template-columns: 1fr 1fr;
 
 z-index: 10;
 
@@ -68,7 +53,7 @@ z-index: 10;
 
   .nav-container {
     grid-column-start: 2;
-    grid-column-end: 6;
+    grid-column-end: -1;
 
     display: grid;
     justify-content: end;
@@ -78,9 +63,15 @@ z-index: 10;
 
   }
 
+  /*Menu*/
+
+  /*Pääotsikko*/
+
   .main-h {
 
     margin-bottom: 50vh;
+    grid-column-start: 1;
+    grid-column-end: -1;
   }
 
 h1 {
@@ -89,6 +80,7 @@ h1 {
 
       text-align:center;
   }
+ /*Pääotsikko*/
 
     /*Kuvat*/
 
@@ -124,6 +116,58 @@ position: relative;
 
 }
 
+/*Kuvat*
+
+/*Sisältö*/
+.text-container {
+
+  grid-column-start: 2;
+  grid-column-end: 5;
+  padding: 20px 20px 20px 20px;
+
+}
+
+/*Sisältö*/
+
+/*Footer*/
+
+.footer-container {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: auto;
+  place-items: center;
+  background-color: red;
+  z-index: 5;
+  padding-top: 50px;
+
+
+}
+
+.footer {
+  padding: 10px;
+
+}
+
+
+.footer ul {
+  list-style: none;
+  padding-left: 0px;
+
+}
+
+.copyright {
+
+  font-size: 0.8em;
+  grid-column-start: 1;
+  grid-column-end: -1;
+  justify-self: left;
+
+}
+
+/*Footer*/
+
 /*Animaatiot*/
 
 [class*="section-"] {
@@ -149,31 +193,61 @@ position: relative;
     }
 }
 
+/*Animaatiot*/
 
 /* Mobiili: Keskittää sisällön ja muuttaa kolumnien määrän yhteeen*/
 
 @media only screen and (max-width: 700px) {
 
 
+    .grid-container {
+
+      grid-template-columns: 1fr;
+      
+    }
+
+    .img-padding {
+
+      padding: 0px;
+
+    }
 
     [class*="-container"] {
-  
+
       grid-column-start: 1;
-      grid-column-end: 6;
-      
+      grid-column-end: -1;
+
     }
 
     .nav-container {
 
       grid-column-start: 2;
-      grid-column-end: 6;
+      grid-column-end: -1;
 
     }
 
-    .img-padding {
-      padding: 0px;
+    .footer-container {
+
+      grid-template-columns: 1fr;
+
+    }
+
+    .footer {
+      margin-bottom: 10px;
+    }
+
+    .footer.logo {
+
+      margin-bottom: 0px;
+      padding-bottom: 0px;
+    }
+
+    .footer-text {
+      text-align: center;
     }
     
+ 
+
     
 
 }
