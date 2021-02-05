@@ -15,7 +15,7 @@
 
         <!--Menu-->
 
-        <div class="menu-container sticky">
+        <div class="menu-container sticky" id="menu">
 
             <div class="item logo"><img src="images/nimi-01.png">
             </div>
@@ -34,9 +34,21 @@
 
             const hamburger = document.getElementById("hamburger");
             const navlinks = document.getElementById("nav-links");
+            const menu = document.getElementById("menu");
+            hamburger.style.color = "black";
 
             function hamburgerBtn() {
                 navlinks.classList.toggle("show");
+                menu.classList.toggle("show");
+
+                if (hamburger.style.color == "black") {
+                    hamburger.style.color = "tomato";
+                }
+                else {
+                    hamburger.style.color = "black"
+                }
+
+
 
             }
 

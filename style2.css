@@ -47,8 +47,9 @@ background-color: transparent;
   display: grid;
   background-color: white;
   grid-template-columns: 1fr 1fr;
-
-z-index: 10;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
+  max-height: 150px;
+  z-index: 10;
 
 
 }
@@ -98,10 +99,11 @@ z-index: 10;
 
   .main-h {
 
-    margin-bottom: 30vh;
-
+    height: 100vh;
     grid-column-start: 1;
     grid-column-end: -1;
+    display: grid;
+    place-items: center;
     color:tomato;
 
   }
@@ -153,7 +155,8 @@ img {
   text-align: center;
   position: relative;
   place-items: center;
-  margin: auto;
+  margin: auto auto 30vh auto;
+
 
 }
 
@@ -161,9 +164,7 @@ img {
 
 /*Sisältö*/
 .text-container {
-
-  margin-top: 30vh;
-  margin-bottom: 30vh;
+  margin: auto auto 30vh auto;
   grid-column-start: 2;
   grid-column-end: 5;
   padding: 20px 20px 20px 20px;
@@ -272,6 +273,10 @@ img {
 
     }
 
+    .menu-container.show {
+      max-height:min-content;
+    }
+
     .nav-container {
 
       display: none;
@@ -281,13 +286,12 @@ img {
 
     .hamburger {
 
-      max-width: max-content;
-      height: 20px;
       display:block;
       background-color: transparent;
       border: 0;
+      outline: none;
       font-size: 20px;
-      color: black;
+      
       padding: 60px 60px 60px 60px;
       justify-self: end;
  
@@ -300,9 +304,10 @@ img {
 
     .nav-container.show {
       display: grid;
+      grid-template-columns: 1fr;
       justify-content: center;
-      grid-auto-flow:row;
-      text-align: center;
+      background-color: white;
+      grid-auto-flow: row;
       height: 100vh;
       align-content: start;
 
@@ -310,6 +315,8 @@ img {
 
     .nav-link {
       width: 100%;
+      text-align: center;
+      padding: 20px 0px 20px 0px;
     }
 
     .nav-link:active {
