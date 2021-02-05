@@ -32,23 +32,38 @@
 
         <script>
 
+
+            //Hampurilaisnappi
+
             const hamburger = document.getElementById("hamburger");
             const navlinks = document.getElementById("nav-links");
             const menu = document.getElementById("menu");
             hamburger.style.color = "black";
+            var menuopen = false;
+
 
             function hamburgerBtn() {
+
                 navlinks.classList.toggle("show");
                 menu.classList.toggle("show");
 
+                //Jos menu ei ole jo auki 
+
                 if (hamburger.style.color == "black") {
                     hamburger.style.color = "tomato";
-                }
-                else {
-                    hamburger.style.color = "black"
+                    menuopen = true;
                 }
 
+                else {
+
+                    //Jos menu auki
+
+                    hamburger.style.color = "black"
+                    menuopen = false;
+                }
             }
+
+            //Skrollausefekti
 
             var prevScrollY = window.pageYOffset;
             var menuHeight = menu.offsetHeight;
@@ -56,11 +71,12 @@
             menu.style.top = "-" + menuHeight + "px";
 
 
-            function showMenu() {
+            function showMenu(bool) {
 
                 menu.style.visibility = "visible";
                 var currentScrollY = window.pageYOffset;
-                if (currentScrollY > prevScrollY) {
+
+                if (currentScrollY > prevScrollY && bool == false) {
                     menu.style.top = "-" + menuHeight + "px";
                     console.log(menuHeight);
                 }
@@ -69,7 +85,6 @@
                 }
 
                 prevScrollY = currentScrollY;
-
             }
 
         </script>
@@ -166,10 +181,8 @@
                     else {
                         px++;
                         image.style.filter = "blur(" + px + "px)";
-
                     }
                 }
-
             }
 
             function antiBlur(image) {
@@ -186,11 +199,8 @@
                     else {
                         px--;
                         image.style.filter = "blur(" + px + "px)";
-
                     }
-
                 }
-
             }
 
             function infoText(element, id) {
@@ -217,7 +227,7 @@
                 slideAnim("1", 400);
                 slideAnim("2", 1100);
                 slideAnim("3", 1700);
-                showMenu();
+                showMenu(menuopen);
             }
 
 
@@ -233,12 +243,8 @@
                         else {
                             continue;
                         }
-
-
                     }
-
                 }
-
             }
 
 

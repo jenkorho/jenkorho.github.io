@@ -39,7 +39,7 @@ a:active{
   grid-column-start: 1;
   grid-column-end: -1;
   display: grid;
-  position: fixed;
+  position: sticky;
   background-color: white;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
