@@ -17,89 +17,31 @@
 
         <div class="menu-container" id="menu">
 
-            <div class="item logo"><img src="images/nimi-01.png">
+            <div class="logo"><img src="images/nimi-01.png">
             </div>
             <button class="hamburger" id="hamburger" onclick="hamburgerBtn()">
                 <i class="fa">&#xf0c9;</i>
             </button>
-            <div class="item nav-container" id="nav-links">
+            <div class="nav-container" id="nav-links">
                 <a class="nav-link">Linkki</a>
+                <a href="sivu2.html" class="nav-link">Hieno sivu</a>
                 <a class="nav-link">Info</a>
                 <a class="nav-link">Yhteystiedot</a>
             </div>
 
         </div>
 
-        <script>
-
-
-            //Hampurilaisnappi
-
-            const hamburger = document.getElementById("hamburger");
-            const navlinks = document.getElementById("nav-links");
-            const menu = document.getElementById("menu");
-            hamburger.style.color = "black";
-            var menuopen = false;
-
-
-            function hamburgerBtn() {
-
-                navlinks.classList.toggle("show");
-                menu.classList.toggle("show");
-
-                //Jos menu ei ole jo auki 
-
-                if (hamburger.style.color == "black") {
-                    hamburger.style.color = "tomato";
-                    menuopen = true;
-                }
-
-                else {
-
-                    //Jos menu auki
-
-                    hamburger.style.color = "black"
-                    menuopen = false;
-                }
-            }
-
-            //Skrollausefekti
-
-            var prevScrollY = window.pageYOffset;
-            var menuHeight = menu.offsetHeight;
-            menu.style.visibility = "hidden";
-            menu.style.top = "-" + menuHeight + "px";
-
-
-            function showMenu(bool) {
-
-                menu.style.visibility = "visible";
-                var currentScrollY = window.pageYOffset;
-
-                if (currentScrollY > prevScrollY && bool == false) {
-                    menu.style.top = "-" + menuHeight + "px";
-                    console.log(menuHeight);
-                }
-                else {
-                    menu.style.top = "0";
-                }
-
-                prevScrollY = currentScrollY;
-            }
-
-        </script>
-
         <!--Menu loppuu-->
 
         <!--Ekarivi-->
 
-        <div class="item main-h">
+        <div class="main-h">
             <h1>Iso otsikko</h1>
         </div>
 
         <!--Tokarivi-->
 
-        <div class="item img-container img-padding section-1">
+        <div class="img-container img-padding section-1">
             <img class="img" src="images/0.jpg" id="img1" alt="Demokuva1">
 
             <h2 class="txt img-head" onmouseover="infoText(this, 'img1')" onmouseout="textDisap(this, 'img1')">Hover
@@ -109,7 +51,7 @@
 
 
 
-        <div class="item text-container section-2">
+        <div class="text-container section-2">
             <h3 class="txt">Mikä sivu?</h3>
             <p class="txt"><span class="em">Täällä kokeilen erilaisia toiminnallisuuksia ja responsiivisuutta.</span>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id debitis fugit velit quo ex
@@ -123,7 +65,7 @@
                 asperiores!</p>
         </div>
 
-        <div class="item img-container img-padding section-3">
+        <div class="img-container img-padding section-3">
             <img class="img" src="images/1.jpg" id="img2" alt="Demokuva 2">
             <h2 class="txt img-head" onmouseover="infoText(this, 'img2')" onmouseout="textDisap(this, 'img2')">Menu
             </h2>
@@ -131,7 +73,7 @@
 
         <!--Footer-->
 
-        <div class="item footer-container">
+        <div class="footer-container">
             <div class="footer logo"><img src="images/nimi-01.png"></div>
             <div class="footer">
                 <h4 class="footer-text">Tietoa meistä</h4>
@@ -157,98 +99,9 @@
 
         <!--Scriptaus-->
 
-        <script>
+    </div>
 
-            const img_d = "Veritatis quisquam consectetur, fuga asperiores impedit itaque voluptates velit animi, suscipit rem" +
-                "minus non ex a amet libero nulla.Soluta eveniet quo placeat rerum nisi enim, magni adipisci fuga " +
-                "asperiores!";
-
-
-            var originaltext = "";
-
-
-            function imageBlur(image) {
-
-                var id = setInterval(frame, 5);
-                var px = 0;
-
-                console.log(image);
-
-                function frame() {
-                    if (px == 50) {
-                        clearInterval(id);
-                    }
-                    else {
-                        px++;
-                        image.style.filter = "blur(" + px + "px)";
-                    }
-                }
-            }
-
-            function antiBlur(image) {
-
-                var id = setInterval(frame, 5);
-                var px = 50;
-
-                console.log(image);
-
-                function frame() {
-                    if (px == 0) {
-                        clearInterval(id);
-                    }
-                    else {
-                        px--;
-                        image.style.filter = "blur(" + px + "px)";
-                    }
-                }
-            }
-
-            function infoText(element, id) {
-                var img = document.getElementById(id);
-                originaltext = element.innerHTML;
-                element.innerHTML = img_d;
-                element.style.fontSize = "1.3em";
-                element.style.fontWeight = "300";
-                imageBlur(img);
-            }
-
-            function textDisap(element, id) {
-                var img = document.getElementById(id);
-                element.innerHTML = originaltext;
-                element.style.fontSize = "2.5em";
-                element.style.fontWeight = "700";
-                antiBlur(img);
-            }
-
-
-            //funktiokutsut oisoiden määrän mukaan
-            window.onscroll = function () {
-
-                slideAnim("1", 400);
-                slideAnim("2", 1100);
-                slideAnim("3", 1700);
-                showMenu(menuopen);
-            }
-
-
-
-            function slideAnim(name, height) {
-                if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
-                    var a = document.getElementsByClassName("section-" + name);
-
-                    for (var i = 0; i < a.length; i++) {
-                        if (a[i].classList.contains("slide") == false) {
-                            a[i].className = a[i].className + " slide";
-                        }
-                        else {
-                            continue;
-                        }
-                    }
-                }
-            }
-
-
-        </script>
+    <script src="script.js"></script>
 
 </body>
 
