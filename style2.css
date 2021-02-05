@@ -16,12 +16,6 @@ body {
   
   }
 
-.sticky {
-    position: sticky;
-    top: 0px;
-
-  }
-
 a:hover {
   color: tomato;
   cursor:pointer;
@@ -33,7 +27,7 @@ a:active{
 .em {
 
   text-decoration: underline 3px;
-background-color: transparent;
+  background-color: transparent;
   text-decoration-color:tomato;
   text-underline-offset: 1px 3px;
 
@@ -45,10 +39,12 @@ background-color: transparent;
   grid-column-start: 1;
   grid-column-end: -1;
   display: grid;
+  position: fixed;
   background-color: white;
   grid-template-columns: 1fr 1fr;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.5);
   max-height: 150px;
+  transition: top 0.4s;
   z-index: 10;
 
 

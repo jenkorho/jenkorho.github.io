@@ -15,7 +15,7 @@
 
         <!--Menu-->
 
-        <div class="menu-container sticky" id="menu">
+        <div class="menu-container" id="menu">
 
             <div class="item logo"><img src="images/nimi-01.png">
             </div>
@@ -48,10 +48,29 @@
                     hamburger.style.color = "black"
                 }
 
-
-
             }
 
+            var prevScrollY = window.pageYOffset;
+            var menuHeight = menu.offsetHeight;
+            menu.style.visibility = "hidden";
+            menu.style.top = "-" + menuHeight + "px";
+
+
+            function showMenu() {
+
+                menu.style.visibility = "visible";
+                var currentScrollY = window.pageYOffset;
+                if (currentScrollY > prevScrollY) {
+                    menu.style.top = "-" + menuHeight + "px";
+                    console.log(menuHeight);
+                }
+                else {
+                    menu.style.top = "0";
+                }
+
+                prevScrollY = currentScrollY;
+
+            }
 
         </script>
 
@@ -192,14 +211,16 @@
             }
 
 
+            //funktiokutsut oisoiden määrän mukaan
             window.onscroll = function () {
-
-                //funktiokutsut oisoiden määrän mukaan
 
                 slideAnim("1", 400);
                 slideAnim("2", 1100);
                 slideAnim("3", 1700);
+                showMenu();
             }
+
+
 
             function slideAnim(name, height) {
                 if (document.body.scrollTop > height || document.documentElement.scrollTop > height) {
