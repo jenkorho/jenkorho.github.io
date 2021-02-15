@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saippuakauppias</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="soapscript.js" defer></script>
+    <link rel="stylesheet" href="stylesoap.css">
+    <style>
+        html {
+            visibility: none;
+        }
+        </style>
+</head>
+<body>
+  
+    <main>
+        <section class="section-1">
+            <div class="section-container">
+
+            <svg id="pear-svg" class="illustration drop-shadow hue-rotate" data-name="pear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 518.59 819.08">
+                
+                <defs>
+                    <radialGradient id="pearGradient">
+                      <stop offset="50%" stop-color="rgb(0, 255, 136)"/>
+                      <stop offset="95%" stop-color="rgb(15, 158, 91)" />
+                    </radialGradient>
+                  </defs>
+
+                <path id="pear-body" d="M799.65,871.49C644.44,795.73,656.89,573.5,762,500.2c149.81-104.48,238.7-267,353.29-209.67s42.16,248,55.67,357.29C1200.18,884.14,986.09,962.5,799.65,871.49Z" 
+                transform="translate(-682.97 -89.31)" style="fill:url('#pearGradient')">
+          
+                </path>
+            <path id="pear-stick" d="M1195.56,191.71s-74.46,84.53-92.12,124.8" transform="translate(-682.97 -89.31)"/>
+            <path id="pear-leaf" d="M1033.5,205.31c0-34.24,38.2-116,38.2-116s77.8,57.76,77.8,92-40,112.8-40,112.8S1033.5,239.55,1033.5,205.31Z" transform="translate(-682.97 -89.31)" style="fill:#1e8221"/>
+                
+        </svg>
+
+            <div class="main-h">
+                <div class="underline-container">
+                    <div class="underline"></div>
+                </div> 
+                <h1>Fruit soaps</h1>
+
+            </div>
+        
+    </div>
+    </section>
+<section class="section-2">
+    <div class="section-container page-width">
+        <div class="curved">
+            <svg id="curved-background-1" class="curved-background" data-name="curved-background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                
+                <path id="curved-path" d=
+                "M 0,5
+                Q 5,0 10,5
+                t 10,0 10,0 10,0 10,0 10,0 10,0 10,0 10,0 10,0
+                L 100,95
+                Q 95,100 90,95
+                t -10,0 -10,0 -10,0 -10,0 -10,0 -10,0 -10,0 -10,0 -10,0
+                L 0,5 z
+                ">     
+            </svg>
+            <div class="text-container">
+                <h2>Meistä</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus beatae recusandae vel. Assumenda modi debitis nostrum quaerat repudiandae expedita nisi dolor nemo! Amet quisquam soluta corrupti non labore eum facere?
+                Repellendus fugiat libero perferendis, natus sed ipsum modi laudantium possimus doloremque facere nobis dignissimos mollitia, quasi illo fugit nulla cupiditate. Est maxime delectus sit quisquam ex provident quae officia voluptatum.
+                Quia officia ipsa minus ratione optio? Quo expedita sed nam iusto, sint laudantium aut, nesciunt animi eaque esse consequatur error quis facilis, accusamus soluta tempore. Quam commodi nostrum laudantium nam?</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section-3">
+        <div class="section-container">
+            <div class="shelf">
+                <div class="shelf-content" id="s-c-1">
+                    <div class="product">
+                        <div class="shelf-item image-container">
+                            <svg class="product-image"id="pullo1" data-name="pullo1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 368 590"><path d="M522.11,773H357.89A91.89,91.89,0,0,1,266,681.11l40-262.22A91.89,91.89,0,0,1,397.89,327H502.11A91.89,91.89,0,0,1,594,418.89l40,262.22C634,731.86,572.86,773,522.11,773Z" transform="translate(-266 -183)" style="fill:#df68ff"/><rect x="101" y="41" width="167" height="108" style="fill:#6bffcd"/><rect x="100" width="167" height="46" style="fill:#df68ff"/></svg>
+                        </div>
+                        
+                    </div>
+                    <div class="shelf-item description" id="d-1">
+                        <a href="">Tuote 1</a>
+                        <ul class="collapse" id="dl-1">
+                            <li>Hedelmä</li>
+                            <li>Hiuksille</li>
+                            <li>1l / 0.5l</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="shelf-content" id="s-c-2">
+                    <div class="product">
+                    <div class="shelf-item image-container">
+                        <svg class="product-image" id="pullo2" data-name="pullo2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190 646.21"><rect y="200.21" width="190" height="446" rx="69.94" style="fill:#ffa356"/><rect x="46.58" y="95.21" width="97.42" height="108" style="fill:#6bffcd"/><rect x="70.58" y="0.21" width="48.42" height="108" style="fill:#6bffcd"/><rect x="465.69" y="132.9" width="28.21" height="108" transform="translate(-62.1 493.9) rotate(-90)" style="fill:#6bffcd"/><rect x="46.58" y="320.21" width="108.42" height="108" style="fill:#6bffcd"/></svg>
+                    </div>
+                    </div>
+                    <div class="shelf-item description" id="d-2">
+                        <a href="">Tuote 2</a>
+                        <ul class="collapse" id="dl-2">
+                            <li>Hedelmä</li>
+                            <li>Hiuksille</li>
+                            <li>1l / 0.5l</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="shelf-content" id="s-c-3">
+                    <div class="product">
+                    <div class="shelf-item image-container">
+                        <svg class="product-image" id="pullo3" data-name="pullo3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 328 712">
+                            <rect y="266" width="328" height="446" rx="91.89" style="fill:#00a379"/>
+                            <rect x="67" y="161" width="191" height="108" style="fill:#6bffcd"/>
+                            <rect x="101" y="400" width="227" height="143" style="fill:#6bffcd"/>
+                            <rect x="132" y="63" width="54" height="98" style="fill:#6bffcd"/>
+                            <rect x="116" width="174" height="63" style="fill:#6bffcd"/>
+                        </svg>
+                    </div>
+ 
+                    </div>
+                    <div class="shelf-item description" id="d-3">
+                        <a href="">Tuote 3</a>
+                        <ul class="collapse" id="dl-3">
+                            <li>Hedelmä</li>
+                            <li>Hiuksille</li>
+                            <li>1l / 0.5l</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="shelf-content" id="s-c-4">
+                    <div class="product">
+                    <div class="shelf-item image-container">
+                        <svg class="product-image" id="pullo4" data-name="pullo4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 446"><rect width="460" height="446" rx="108.82" style="fill:#b5d000"/><rect y="136" width="460" height="53" style="fill:#6bffcd"/></svg>
+                    </div>
+                
+                    </div>
+                    <div class="shelf-item description" id="d-4">
+                        <a href="">Tuote 4</a>
+                        <ul class="collapse" id="dl-4">
+                            <li>Hedelmä</li>
+                            <li>Hiuksille</li>
+                            <li>1l / 0.5l</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-item">Footer Item 1</div>
+            <div class="footer-item">Footer Item 2</div>
+            <div class="footer-item">Footer Item 3</div>
+        </div>
+    </footer>
+</body>
+
+</html>
