@@ -53,17 +53,15 @@ pearStick.style.strokeDashoffset = stickLength;
 
 
 
-//var tl = new TimelineMax();
+var tl = new TimelineMax();
 
-//tl.from("#pear-body", 1, {scaleY: 0, transformOrigin: "center", ease: Power2.easeInOut})
+tl.from("#pear-body", 1, {scaleY: 0, transformOrigin: "center", ease: Power2.easeInOut})
 
-//.from("#pear-leaf", 0.7, {scaleY: 0, transformOrigin: "bottom", ease: Power2.easeInOut})
+.from("#pear-leaf", 0.7, {scaleY: 0, transformOrigin: "bottom", ease: Power2.easeInOut})
 
-//.from(".main-h", 0.5, {scaleX: 0, transformOrigin: "left", ease: Power2.easeInOut 
-//});
+.from(".main-h", 0.5, {scaleX: 0, transformOrigin: "left", ease: Power2.easeInOut 
+});
 
-
-//.from("#pear-stick", 0.7, {scaleY: 0, transformOrigin: "bottom", ease: Power2.easeInOut})
 
 
 $(".shelf-content").mouseover(expandShelf);
