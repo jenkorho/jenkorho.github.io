@@ -28,17 +28,17 @@ $(".nav-link").mouseover((event) => {
 
 });
 
-$("#message-btn").mouseover((event) => {
+/* $("#message-btn").mouseover((event) => {
 
-    let element = event.currentTarget;
+    const element = event.currentTarget;
     //let underline = element.firstChild;
-    let underline = element.nextSibling.nextSibling;
+    const underline = element.nextSibling.nextSibling;
     console.log(underline);
     underline.classList.toggle("anim");
 
-});
+}); */
 
-$("#message-btn").mouseout((event) => {
+/* $("#message-btn").mouseout((event) => {
 
     let element = event.currentTarget;
     //let underline = element.firstChild;
@@ -47,7 +47,7 @@ $("#message-btn").mouseout((event) => {
     underline.classList.toggle("anim");
 
 });
-
+ */
 $(".nav-link").mouseout((event) => {
 
     let element = event.currentTarget;

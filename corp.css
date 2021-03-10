@@ -25,6 +25,11 @@ button {
   font-family: Lora, serif;
 }
 
+button:hover {
+  background: rgb(240, 253, 255);
+  color: slateblue;
+}
+
 .place-center {
   margin: auto;
   justify-content: center;
@@ -112,13 +117,14 @@ h1 {
 .flex-container {
   display: flex;
   padding: 10%;
-  max-width: 1000px;
+
   height: auto;
 }
 
 .img-container {
   width: 800px;
   max-height: 100vh;
+  padding: 1rem;
 }
 
 .illustration-container {
